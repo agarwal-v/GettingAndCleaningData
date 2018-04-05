@@ -15,7 +15,7 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 
 'tidySet.txt': independent tidy data set with the average of each variable for each activity and each subject.
 
-#How the script run_analysis works
+# How the script run_analysis works
 <li> Read Training data using read.table command
 <li> Read Test data using read.table command
 <li> Read feature and activity labels
