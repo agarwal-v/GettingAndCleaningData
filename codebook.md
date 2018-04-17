@@ -6,25 +6,25 @@ The experiments have been carried out with a group of 30 volunteers within an ag
 * Subjects: Individual Subject identifier.
 * Activity: Activity performed when collecting this data.
 * Features: Following features were generated from the accelerometer and gyroscope for each subject
-**tBodyAcc-XYZ
-**tGravityAcc-XYZ
-**tBodyAccJerk-XYZ
-**tBodyGyro-XYZ
-**tBodyGyroJerk-XYZ
-**tBodyAccMag
-**tGravityAccMag
-**tBodyAccJerkMag
-**tBodyGyroMag
-**tBodyGyroJerkMag
-**fBodyAcc-XYZ
-**fBodyAccJerk-XYZ
-**fBodyGyro-XYZ
-**fBodyAccMag
-**fBodyAccJerkMag
-**fBodyGyroMag
-**fBodyGyroJerkMag
+  * tBodyAcc-XYZ
+  * tGravityAcc-XYZ
+  * tBodyAccJerk-XYZ
+  * tBodyGyro-XYZ
+  * tBodyGyroJerk-XYZ
+  * tBodyAccMag
+  * tGravityAccMag
+  * tBodyAccJerkMag
+  * tBodyGyroMag
+  * tBodyGyroJerkMag
+  * fBodyAcc-XYZ
+  * fBodyAccJerk-XYZ
+  * fBodyGyro-XYZ
+  * fBodyAccMag
+  * fBodyAccJerkMag
+  * fBodyGyroMag
+  * fBodyGyroJerkMag
 
-*For each of the above following values are calculated
-**mean(): Mean value
-**std(): Standard deviation
+* For each of the above following values are calculated
+  * mean(): Mean value
+  * std(): Standard deviation
 
