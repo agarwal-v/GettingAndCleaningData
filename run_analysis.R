@@ -23,23 +23,26 @@ sub_train <- rbind(sub_train, sub_test)
 
 # Give col names to data set
 names(x_train) <- features[, 2]
-names(y_train) <- "ActivityId"
+names(y_train) <- "Activity"
 names(sub_train) <- "Subjects"
 names(activity) <- c("ActivityId", "ActivityName")
 
+
+y_train$Activity <- factor(y_train$Activity,
+                    levels = activity$ActivityId,
+                    labels = activity$ActivityName)
 # Extract columns with mean or std in names
 x_meanstd <- x_train[,grep("mean|std", features[,2], ignore.case = TRUE)]
-y_activityNames <- merge(y_train, activity)
 
 #Rbind all 3 data sets to create a final data frame
-df <- cbind(sub_train, y_activityNames, x_meanstd)
+df <- cbind(sub_train, y_train, x_meanstd)
 
 # melt the data sets using 1st three variables as id
-dfMelt <- melt(df,id=c(names(sub_train), names(y_activityNames)),
+dfMelt <- melt(df,id=c(names(sub_train), names(y_train)),
                measure.vars=names(x_meanstd))
 
 #average all other variables
-tidySet <- dcast(dfMelt, Subjects + ActivityId + ActivityName ~ variable, mean)
+tidySet <- dcast(dfMelt, Subjects + Activity ~ variable, mean)
 
 # Write to File
 write.table(tidySet, file = "tidySet.txt", row.names = FALSE)
